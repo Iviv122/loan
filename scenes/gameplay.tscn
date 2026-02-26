@@ -1,0 +1,99 @@
+[gd_scene format=4 uid="uid://c261hhd0ee4a2"]
+
+[ext_resource type="Texture2D" uid="uid://nnl20jj758tk" path="res://raw_assets/sprites/bread.png" id="1_7biu0"]
+[ext_resource type="Script" uid="uid://c4vvddb8gorf1" path="res://objects/bread/throw.gd" id="1_din8e"]
+[ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="2_00tan"]
+[ext_resource type="Script" uid="uid://cmct70bd1m8gw" path="res://objects/visual/follow_target.gd" id="3_l1v76"]
+[ext_resource type="Texture2D" uid="uid://cilw16tar320p" path="res://raw_assets/sprites/walls.png" id="4_ct7aa"]
+[ext_resource type="Texture2D" uid="uid://q6r0orfcrptu" path="res://raw_assets/sprites/bridge.png" id="4_ocj2s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocj2s"]
+atlas = ExtResource("1_7biu0")
+region = Rect2(0, 0, 681, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_din8e"]
+atlas = ExtResource("1_7biu0")
+region = Rect2(681, 0, 681, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bh5q"]
+atlas = ExtResource("1_7biu0")
+region = Rect2(1362, 0, 681, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocj2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocj2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_din8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bh5q")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ocj2s"]
+points = PackedVector2Array(-246.87506, 100, -258.12506, 13.749939, -149.37503, -95.00012, 123.12507, -128.75012, 231.87512, -95.00012, 266.87512, -26.250061, 229.37512, 38.74994, -143.12503, 132.5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_din8e"]
+texture = ExtResource("4_ocj2s")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4bh5q"]
+tile_size = Vector2i(256, 256)
+sources/0 = SubResource("TileSetAtlasSource_din8e")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocj2s"]
+size = Vector2(3254, 155)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ct7aa"]
+texture = ExtResource("4_ct7aa")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ocj2s"]
+tile_size = Vector2i(256, 256)
+sources/0 = SubResource("TileSetAtlasSource_ct7aa")
+
+[node name="Node2D" type="Node2D" unique_id=2048607250]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=955218703]
+position = Vector2(0, -511.99997)
+script = ExtResource("1_din8e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=144822767]
+scale = Vector2(0.99999994, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_ocj2s")
+animation = &"new_animation"
+script = ExtResource("2_00tan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=940125959]
+position = Vector2(-3.7499995, 12.499947)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("ConvexPolygonShape2D_ocj2s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=343157819 node_paths=PackedStringArray("target")]
+zoom = Vector2(0.35, 0.35)
+script = ExtResource("3_l1v76")
+target = NodePath("../RigidBody2D")
+
+[node name="Bridge" type="StaticBody2D" parent="." unique_id=925666079]
+
+[node name="Bridge" type="TileMapLayer" parent="Bridge" unique_id=2106695384]
+tile_map_data = PackedByteArray("AAD7/wAAAAAAAAAAAAD8/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAD6/wAAAAAAAAAAAAAGAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_4bh5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bridge" unique_id=1567964997]
+position = Vector2(162, 104)
+shape = SubResource("RectangleShape2D_ocj2s")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=872660108]
+tile_map_data = PackedByteArray("AAD7//z/AAABAAAAAAD7//3/AAABAAAAAAD7//7/AAABAAAAAAD7////AAABAAAAAAD7/wAAAAABAAAAAAD7/wEAAAABAAAAAAD7/wIAAAABAAAAAAD7/wMAAAABAAAAAAAEAPz/AAACAAAAAAAEAP3/AAACAAAAAAAEAP7/AAACAAAAAAAEAP//AAACAAAAAAAEAAAAAAACAAAAAAAEAAEAAAACAAAAAAAEAAIAAAACAAAAAAAEAAMAAAACAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAAFAPz/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAD3//v/AAAAAAAAAAD4//v/AAAAAAAAAAD5//v/AAAAAAAAAAD6//v/AAAAAAAAAAD3//r/AAAAAAAAAAD4//r/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAAFAPr/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAD7//r/AAABAAAAAAD7//v/AAABAAAAAAAEAPr/AAACAAAAAAAEAPv/AAACAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP//AAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ocj2s")
