@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="15_407ns"]
 [ext_resource type="PackedScene" uid="uid://btlgqip0fb4ot" path="res://assets/pit_segment/v_like.tscn" id="15_m6b5a"]
 [ext_resource type="Texture2D" uid="uid://roi22uqlamt7" path="res://raw_assets/sprites/click_to_restart.png" id="15_w3w6i"]
+[ext_resource type="PackedScene" uid="uid://mvj76012s8bn" path="res://assets/pit_segment/zig.tscn" id="16_mesn4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
 texture = ExtResource("5_din8e")
@@ -170,7 +171,7 @@ position = Vector2(-6897, -374)
 position = Vector2(48, 54)
 script = ExtResource("10_hbo4f")
 bread = NodePath("../bread")
-segments = Array[PackedScene]([ExtResource("11_ctvyo"), ExtResource("12_nt65e"), ExtResource("13_w3w6i"), ExtResource("14_pv71h"), ExtResource("15_m6b5a")])
+segments = Array[PackedScene]([ExtResource("11_ctvyo"), ExtResource("12_nt65e"), ExtResource("13_w3w6i"), ExtResource("14_pv71h"), ExtResource("15_m6b5a"), ExtResource("16_mesn4")])
 metadata/_custom_type_script = "uid://cf4bipkuv6l11"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=403851728 node_paths=PackedStringArray("camera", "bread")]
