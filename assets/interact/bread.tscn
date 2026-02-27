@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://djwvgrysyt4is"]
+
+[ext_resource type="Script" uid="uid://c4vvddb8gorf1" path="res://objects/bread/bread.gd" id="1_2nfan"]
+[ext_resource type="Texture2D" uid="uid://nnl20jj758tk" path="res://raw_assets/sprites/bread.png" id="2_v38bb"]
+[ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="3_wemuq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1v76"]
+atlas = ExtResource("2_v38bb")
+region = Rect2(0, 0, 681, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct7aa"]
+atlas = ExtResource("2_v38bb")
+region = Rect2(681, 0, 681, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocj2s"]
+atlas = ExtResource("2_v38bb")
+region = Rect2(1362, 0, 681, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7biu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1v76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct7aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocj2s")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ct7aa"]
+points = PackedVector2Array(41, -105, 199, -92, 260, -23, 221, 53, -165, 150, -244, 114, -253, 27, -152, -49)
+
+[node name="bread" type="RigidBody2D" unique_id=1769527575]
+mass = 2.05
+script = ExtResource("1_2nfan")
+throw_power = 200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977233024]
+sprite_frames = SubResource("SpriteFrames_7biu0")
+animation = &"new_animation"
+script = ExtResource("3_wemuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704606302]
+shape = SubResource("ConvexPolygonShape2D_ct7aa")

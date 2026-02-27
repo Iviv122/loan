@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://d0s1kn6vrj5eo"]
+
+[ext_resource type="Script" uid="uid://vtdknynreyoj" path="res://objects/enviroment/coin.gd" id="1_kpxce"]
+[ext_resource type="Texture2D" uid="uid://tcb6gun6cib6" path="res://raw_assets/sprites/vcoin.png" id="2_kd61k"]
+[ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="3_4t6n6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_101mb"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(0, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbo4f"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(197, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctvyo"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(394, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qixtg"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(591, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt65e"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(788, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhmdk"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(985, 0, 197, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5y6v"]
+atlas = ExtResource("2_kd61k")
+region = Rect2(1182, 0, 197, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_407ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_101mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbo4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctvyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qixtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt65e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhmdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5y6v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_101mb"]
+radius = 122.64
+
+[node name="Coin" type="Area2D" unique_id=1167496453]
+script = ExtResource("1_kpxce")
+metadata/_custom_type_script = "uid://vtdknynreyoj"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1451292743]
+sprite_frames = SubResource("SpriteFrames_407ns")
+script = ExtResource("3_4t6n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706163259]
+shape = SubResource("CircleShape2D_101mb")

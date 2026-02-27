@@ -1,6 +1,13 @@
 extends Camera2D
 
-@export var target : Node2D
+@export var target : Bread 
+
+func _ready():
+	target.died.connect(died)
+
+func died() -> void:
+	target = null
 
 func _process(delta):
-	global_position.y = target.global_position.y 
+	if is_instance_valid(target):
+		global_position.y = target.global_position.y 
