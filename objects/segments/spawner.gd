@@ -17,6 +17,11 @@ var dist_to_pass_target : float = 0
 var id : int = 0
 
 var initialized : Array[Node2D]= []
+var queue : Array[PackedScene] = []
+
+func populate() -> void:
+	for i in segments:
+		queue.append(i)
 
 func _ready():
 	add_spawn_dist = dist_to_pass + add_dist/2
@@ -24,6 +29,7 @@ func _ready():
 
 	dist_to_pass_target += dist_to_pass/2 + add_dist
 
+	populate()
 	spawn()
 
 func spawn() -> void:
@@ -36,7 +42,13 @@ func spawn() -> void:
 
 	id+=1
 
-	var seg : Segment= segments.pick_random().instantiate()
+	if queue.size() <= 0:
+		populate()
+
+	var pick = queue.pick_random()
+	queue.erase(pick)
+	var seg : Segment= pick.instantiate()
+
 	seg.id = id
 
 	seg.global_position.y = spawn_pos 
