@@ -8,6 +8,6 @@ func _ready():
 func died() -> void:
 	target = null
 
-func _process(delta):
+func _process(_delta):
 	if is_instance_valid(target):
-		global_position.y = target.global_position.y 
+		global_position.y = lerp(global_position.y, target.global_position.y , 15 * _delta)

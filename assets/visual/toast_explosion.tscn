@@ -9,12 +9,15 @@ angle_min = -720.0
 angle_max = 720.0
 inherit_velocity_ratio = -0.31
 direction = Vector3(0, -1, 0)
-initial_velocity_min = 1000.0
-initial_velocity_max = 1000.0
+spread = 75.0
+initial_velocity_min = 2948.2
+initial_velocity_max = 2948.2
 gravity = Vector3(0, 5000, 0)
 
 [node name="Node2D" type="GPUParticles2D" unique_id=8357526]
+amount = 12
 texture = ExtResource("1_metxa")
+lifetime = 5.699999999999999
 explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_metxa")

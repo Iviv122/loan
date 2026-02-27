@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cxl8kbd8com6h" path="res://assets/visual/explosion.tscn" id="8_101mb"]
 [ext_resource type="PackedScene" uid="uid://deccjjdiew6im" path="res://assets/interact/saws.tscn" id="8_e124b"]
 [ext_resource type="PackedScene" uid="uid://d08kiakotmtuh" path="res://assets/visual/toast_explosion.tscn" id="9_101mb"]
+[ext_resource type="Script" uid="uid://cf4bipkuv6l11" path="res://objects/segments/spawner.gd" id="10_hbo4f"]
+[ext_resource type="PackedScene" uid="uid://b4klqenuv7e5q" path="res://assets/pit_segment/vertical_saws.tscn" id="11_ctvyo"]
+[ext_resource type="Script" uid="uid://dg6lkmygrh1wx" path="res://assets/debug/fps_meter.gd" id="12_qixtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
 texture = ExtResource("5_din8e")
@@ -94,3 +97,20 @@ position = Vector2(-6936, -519)
 
 [node name="Node2D2" parent="." unique_id=962758129 instance=ExtResource("9_101mb")]
 position = Vector2(-6897, -374)
+
+[node name="Spawner" type="Node2D" parent="." unique_id=11711703 node_paths=PackedStringArray("bread")]
+script = ExtResource("10_hbo4f")
+bread = NodePath("../bread")
+segments = Array[PackedScene]([ExtResource("11_ctvyo")])
+metadata/_custom_type_script = "uid://cf4bipkuv6l11"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=798902861]
+
+[node name="CanvasLayer" type="Label" parent="CanvasLayer2" unique_id=1037265556]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_qixtg")
+metadata/_custom_type_script = "uid://dg6lkmygrh1wx"

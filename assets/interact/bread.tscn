@@ -39,7 +39,12 @@ animations = [{
 points = PackedVector2Array(41, -105, 199, -92, 260, -23, 221, 53, -165, 150, -244, 114, -253, 27, -152, -49)
 
 [node name="bread" type="RigidBody2D" unique_id=1769527575]
+physics_interpolation_mode = 1
+position = Vector2(-1, 1)
+collision_priority = 10.0
 mass = 2.05
+center_of_mass_mode = 1
+continuous_cd = 1
 script = ExtResource("1_2nfan")
 throw_power = 200.0
 death_effect = Array[PackedScene]([ExtResource("2_wemuq"), ExtResource("3_lnd5q")])

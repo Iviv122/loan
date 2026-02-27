@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b4klqenuv7e5q"]
+
+[ext_resource type="Texture2D" uid="uid://cx8jy4s8o1uly" path="res://raw_assets/sprites/saw.png" id="1_ersxt"]
+[ext_resource type="Script" uid="uid://15482fmmi87q" path="res://objects/segments/segment.gd" id="1_sj4e2"]
+[ext_resource type="Script" uid="uid://wktutm6amhk1" path="res://objects/enviroment/wire.gd" id="1_xkvgj"]
+[ext_resource type="Script" uid="uid://dd08ltvxe51wn" path="res://objects/visual/constant_rotation.gd" id="3_ufh8p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkvgj"]
+radius = 600.04083
+
+[node name="VerticalSaws" type="Node2D" unique_id=1508874446]
+script = ExtResource("1_sj4e2")
+metadata/_custom_type_script = "uid://15482fmmi87q"
+
+[node name="Saw" type="Area2D" parent="." unique_id=1258490557]
+position = Vector2(0, -515)
+script = ExtResource("1_xkvgj")
+
+[node name="Saw" type="Sprite2D" parent="Saw" unique_id=13083518]
+position = Vector2(0.99999994, -11)
+scale = Vector2(5, 5)
+texture = ExtResource("1_ersxt")
+script = ExtResource("3_ufh8p")
+speed = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw" unique_id=107906121]
+shape = SubResource("CircleShape2D_xkvgj")
+
+[node name="Saw2" type="Area2D" parent="." unique_id=908884825]
+position = Vector2(0, 730)
+script = ExtResource("1_xkvgj")
+
+[node name="Saw" type="Sprite2D" parent="Saw2" unique_id=53217197]
+scale = Vector2(5, 5)
+texture = ExtResource("1_ersxt")
+script = ExtResource("3_ufh8p")
+speed = -1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw2" unique_id=785296037]
+shape = SubResource("CircleShape2D_xkvgj")
