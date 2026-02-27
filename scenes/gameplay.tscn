@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://corbol6h0uwtk" path="res://objects/enviroment/walls.gd" id="6_4bh5q"]
 [ext_resource type="PackedScene" uid="uid://d0s1kn6vrj5eo" path="res://assets/interact/coin.tscn" id="6_e124b"]
 [ext_resource type="PackedScene" uid="uid://dx4lots0vurem" path="res://assets/interact/wire.tscn" id="7_101mb"]
+[ext_resource type="Texture2D" uid="uid://cx8jy4s8o1uly" path="res://raw_assets/sprites/saw.png" id="8_e124b"]
+[ext_resource type="Script" uid="uid://dqutr8gcnhhna" path="res://objects/enviroment/saws.gd" id="8_hbo4f"]
+[ext_resource type="Script" uid="uid://dd08ltvxe51wn" path="res://objects/visual/constant_rotation.gd" id="9_101mb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
 texture = ExtResource("5_din8e")
@@ -36,6 +39,9 @@ size = Vector2(921.5, 9000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct7aa"]
 size = Vector2(921.5, 9000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbo4f"]
+size = Vector2(2758, 332)
 
 [node name="Node2D" type="Node2D" unique_id=1007655644]
 
@@ -80,3 +86,85 @@ position = Vector2(495, -156)
 
 [node name="wire" parent="." unique_id=1853742232 instance=ExtResource("7_101mb")]
 position = Vector2(-675, -189)
+
+[node name="Saws" type="Area2D" parent="." unique_id=1908626273]
+position = Vector2(0, -928)
+script = ExtResource("8_hbo4f")
+speed = 40.0
+metadata/_custom_type_script = "uid://dqutr8gcnhhna"
+
+[node name="Saw7" type="Sprite2D" parent="Saws" unique_id=1961754144]
+position = Vector2(-1274, -84)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw8" type="Sprite2D" parent="Saws" unique_id=2023069351]
+position = Vector2(1317, -1)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw9" type="Sprite2D" parent="Saws" unique_id=860602061]
+position = Vector2(-980, 4)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw10" type="Sprite2D" parent="Saws" unique_id=32237076]
+position = Vector2(-712, -112)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw11" type="Sprite2D" parent="Saws" unique_id=906126569]
+position = Vector2(-460, -4)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw12" type="Sprite2D" parent="Saws" unique_id=699039602]
+position = Vector2(-240, -120)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw6" type="Sprite2D" parent="Saws" unique_id=1834189187]
+position = Vector2(5, -3)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw5" type="Sprite2D" parent="Saws" unique_id=1439219611]
+position = Vector2(224, -146)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw4" type="Sprite2D" parent="Saws" unique_id=1027578993]
+position = Vector2(444, 27)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw3" type="Sprite2D" parent="Saws" unique_id=1842773430]
+position = Vector2(711, -131)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw2" type="Sprite2D" parent="Saws" unique_id=1284957308]
+position = Vector2(885, 55)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="Saw" type="Sprite2D" parent="Saws" unique_id=1583638685]
+position = Vector2(1081, -151)
+texture = ExtResource("8_e124b")
+script = ExtResource("9_101mb")
+speed = 0.75
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saws" unique_id=1999891712]
+shape = SubResource("RectangleShape2D_hbo4f")
+debug_color = Color(0.6028517, 0.5426517, 3.85046e-07, 0.41960785)
