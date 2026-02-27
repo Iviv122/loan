@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d08kiakotmtuh" path="res://assets/visual/toast_explosion.tscn" id="9_101mb"]
 [ext_resource type="Script" uid="uid://cf4bipkuv6l11" path="res://objects/segments/spawner.gd" id="10_hbo4f"]
 [ext_resource type="PackedScene" uid="uid://b4klqenuv7e5q" path="res://assets/pit_segment/vertical_saws.tscn" id="11_ctvyo"]
+[ext_resource type="PackedScene" uid="uid://mno37hhxhtpr" path="res://assets/pit_segment/horizontal_saws.tscn" id="12_nt65e"]
 [ext_resource type="Script" uid="uid://dg6lkmygrh1wx" path="res://objects/debug/fps_meter.gd" id="12_qixtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
@@ -50,7 +51,7 @@ script = ExtResource("2_ocj2s")
 target = NodePath("../bread")
 
 [node name="bread" parent="." unique_id=1769527575 instance=ExtResource("2_4bh5q")]
-position = Vector2(0, -205)
+position = Vector2(-6, -217)
 
 [node name="bridge" type="StaticBody2D" parent="." unique_id=900584115]
 
@@ -81,9 +82,9 @@ position = Vector2(1870.25, 0)
 shape = SubResource("RectangleShape2D_ct7aa")
 
 [node name="Saws" parent="." unique_id=327374439 instance=ExtResource("8_e124b")]
-position = Vector2(0, -928)
+position = Vector2(0, -1196)
 speed = 100.0
-speed_gain = 1.0
+speed_gain = 0.2
 
 [node name="StartGame" type="Node" parent="." unique_id=7623577 node_paths=PackedStringArray("player", "bridge", "to_activate")]
 script = ExtResource("7_101mb")
@@ -101,7 +102,7 @@ position = Vector2(-6897, -374)
 [node name="Spawner" type="Node2D" parent="." unique_id=11711703 node_paths=PackedStringArray("bread")]
 script = ExtResource("10_hbo4f")
 bread = NodePath("../bread")
-segments = Array[PackedScene]([ExtResource("11_ctvyo")])
+segments = Array[PackedScene]([ExtResource("11_ctvyo"), ExtResource("12_nt65e")])
 metadata/_custom_type_script = "uid://cf4bipkuv6l11"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=798902861]

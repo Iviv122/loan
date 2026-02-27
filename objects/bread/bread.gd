@@ -28,7 +28,7 @@ func push(m_pos : Vector2) -> void:
 	var power = min(dir.length(),max_power)
 	print(power)
 
-	apply_force(dir.normalized()*throw_power*power,m_pos)		
+	apply_force(dir.normalized()*throw_power*power)		
 
 	pushed.emit()
 
