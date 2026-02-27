@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://deccjjdiew6im"]
+
+[ext_resource type="Script" uid="uid://dqutr8gcnhhna" path="res://objects/enviroment/saws.gd" id="1_ln125"]
+[ext_resource type="Texture2D" uid="uid://cx8jy4s8o1uly" path="res://raw_assets/sprites/saw.png" id="2_vlntb"]
+[ext_resource type="Script" uid="uid://dd08ltvxe51wn" path="res://objects/visual/constant_rotation.gd" id="3_jdqa1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbo4f"]
+size = Vector2(2758, 332)
+
+[node name="Saws" type="Area2D" unique_id=327374439]
+script = ExtResource("1_ln125")
+speed = 40.0
+metadata/_custom_type_script = "uid://dqutr8gcnhhna"
+
+[node name="Saw7" type="Sprite2D" parent="." unique_id=1673907448]
+position = Vector2(-1274, -84)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw8" type="Sprite2D" parent="." unique_id=167600949]
+position = Vector2(1317, -1)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw9" type="Sprite2D" parent="." unique_id=1590553717]
+position = Vector2(-980, 4)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw10" type="Sprite2D" parent="." unique_id=1853412362]
+position = Vector2(-712, -112)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw11" type="Sprite2D" parent="." unique_id=2123983135]
+position = Vector2(-460, -4)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw12" type="Sprite2D" parent="." unique_id=782805819]
+position = Vector2(-240, -120)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw6" type="Sprite2D" parent="." unique_id=546398356]
+position = Vector2(5, -3)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw5" type="Sprite2D" parent="." unique_id=1593136474]
+position = Vector2(224, -146)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw4" type="Sprite2D" parent="." unique_id=1695258012]
+position = Vector2(444, 27)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw3" type="Sprite2D" parent="." unique_id=2143739731]
+position = Vector2(711, -131)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw2" type="Sprite2D" parent="." unique_id=491128386]
+position = Vector2(885, 55)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="Saw" type="Sprite2D" parent="." unique_id=1974496840]
+position = Vector2(1081, -151)
+texture = ExtResource("2_vlntb")
+script = ExtResource("3_jdqa1")
+speed = 0.75
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341243471]
+shape = SubResource("RectangleShape2D_hbo4f")
+debug_color = Color(0.6028517, 0.5426517, 3.85046e-07, 0.41960785)
