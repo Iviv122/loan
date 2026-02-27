@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0fcx5y54ma62"]
+
+[ext_resource type="AudioStream" uid="uid://bjt7075ecn5wm" path="res://raw_assets/music/shuffle.ogg" id="1_igbjq"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=1160068160]
+stream = ExtResource("1_igbjq")
+autoplay = true

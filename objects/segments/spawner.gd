@@ -42,7 +42,7 @@ func spawn() -> void:
 	await get_tree().process_frame
 
 	initialized.append(seg)
-	get_tree().root.add_child(seg)
+	get_tree().current_scene.add_child(seg)
 
 	spawn_pos += add_spawn_dist + add_dist/2
 

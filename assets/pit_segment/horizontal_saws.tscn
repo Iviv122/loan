@@ -12,29 +12,56 @@ radius = 600.04083
 script = ExtResource("1_gpfv6")
 metadata/_custom_type_script = "uid://15482fmmi87q"
 
-[node name="Saw" type="Area2D" parent="." unique_id=1258490557]
-position = Vector2(-1100, 0)
+[node name="Saw3" type="Area2D" parent="." unique_id=2055348405]
+position = Vector2(-1100, 585)
 script = ExtResource("2_k6k7w")
 
-[node name="Saw" type="Sprite2D" parent="Saw" unique_id=13083518]
+[node name="Saw" type="Sprite2D" parent="Saw3" unique_id=1156076255]
 position = Vector2(0.99999994, -11)
 scale = Vector2(5, 5)
 texture = ExtResource("3_n8oo0")
 script = ExtResource("4_5ljpt")
 speed = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw" unique_id=107906121]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw3" unique_id=646497882]
 shape = SubResource("CircleShape2D_xkvgj")
 
-[node name="Saw2" type="Area2D" parent="." unique_id=908884825]
-position = Vector2(1100, 0)
+[node name="Saw4" type="Area2D" parent="." unique_id=1456832214]
+position = Vector2(1100, 585)
 script = ExtResource("2_k6k7w")
 
-[node name="Saw" type="Sprite2D" parent="Saw2" unique_id=53217197]
+[node name="Saw" type="Sprite2D" parent="Saw4" unique_id=1841278806]
 scale = Vector2(5, 5)
 texture = ExtResource("3_n8oo0")
 script = ExtResource("4_5ljpt")
 speed = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw2" unique_id=785296037]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw4" unique_id=1428356568]
+shape = SubResource("CircleShape2D_xkvgj")
+
+[node name="Saw5" type="Area2D" parent="." unique_id=1798964621]
+position = Vector2(-1100, -505)
+script = ExtResource("2_k6k7w")
+
+[node name="Saw" type="Sprite2D" parent="Saw5" unique_id=134867298]
+position = Vector2(0.99999994, -11)
+scale = Vector2(5, 5)
+texture = ExtResource("3_n8oo0")
+script = ExtResource("4_5ljpt")
+speed = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw5" unique_id=1752546596]
+shape = SubResource("CircleShape2D_xkvgj")
+
+[node name="Saw6" type="Area2D" parent="." unique_id=1413514752]
+position = Vector2(1100, -505)
+script = ExtResource("2_k6k7w")
+
+[node name="Saw" type="Sprite2D" parent="Saw6" unique_id=1753394183]
+scale = Vector2(5, 5)
+texture = ExtResource("3_n8oo0")
+script = ExtResource("4_5ljpt")
+speed = -1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw6" unique_id=1846732070]
 shape = SubResource("CircleShape2D_xkvgj")

@@ -42,11 +42,10 @@ points = PackedVector2Array(41, -105, 199, -92, 260, -23, 221, 53, -165, 150, -2
 physics_interpolation_mode = 1
 position = Vector2(-1, 1)
 collision_priority = 10.0
-mass = 2.05
-center_of_mass_mode = 1
+mass = 20.0
 continuous_cd = 1
 script = ExtResource("1_2nfan")
-throw_power = 200.0
+throw_power = 3.0
 death_effect = Array[PackedScene]([ExtResource("2_wemuq"), ExtResource("3_lnd5q")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977233024]

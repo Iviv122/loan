@@ -6,6 +6,7 @@ class_name StartGame
 @export var bridge : StaticBody2D 
 
 @export var to_activate : Array[Node2D]
+@export var to_destory : Array[Node2D]
 
 func _ready() -> void:
 	for i in to_activate:
@@ -16,5 +17,9 @@ func _ready() -> void:
 func start() -> void:
 	for i in to_activate:
 		i.set_process(true)
+
+	for i in to_destory:
+		i.queue_free()
+		to_destory.erase(i)
 
 	bridge.set_collision_layer_value(1,false)

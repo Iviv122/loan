@@ -16,9 +16,13 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=140
 config/icon="res://icon.svg"
 
+[autoload]
+
+BackgroundMusic="*uid://c0fcx5y54ma62"
+
 [display]
 
-window/size/mode=3
+window/size/viewport_height=700
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 
@@ -45,4 +49,7 @@ rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/default_filters/anisotropic_filtering_level=0
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+camera/depth_of_field/depth_of_field_bokeh_quality=0
+camera/depth_of_field/depth_of_field_use_jitter=true
 environment/defaults/default_clear_color=Color(0.36862746, 0.2509804, 0.4117647, 1)

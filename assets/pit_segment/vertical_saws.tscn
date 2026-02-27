@@ -14,6 +14,7 @@ metadata/_custom_type_script = "uid://15482fmmi87q"
 
 [node name="Saw" type="Area2D" parent="." unique_id=1258490557]
 position = Vector2(0, -515)
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_xkvgj")
 
 [node name="Saw" type="Sprite2D" parent="Saw" unique_id=13083518]
@@ -28,6 +29,7 @@ shape = SubResource("CircleShape2D_xkvgj")
 
 [node name="Saw2" type="Area2D" parent="." unique_id=908884825]
 position = Vector2(0, 730)
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_xkvgj")
 
 [node name="Saw" type="Sprite2D" parent="Saw2" unique_id=53217197]
