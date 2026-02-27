@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://15482fmmi87q" path="res://objects/segments/segment.gd" id="1_sj4e2"]
 [ext_resource type="Script" uid="uid://wktutm6amhk1" path="res://objects/enviroment/wire.gd" id="1_xkvgj"]
 [ext_resource type="Script" uid="uid://dd08ltvxe51wn" path="res://objects/visual/constant_rotation.gd" id="3_ufh8p"]
+[ext_resource type="PackedScene" uid="uid://d0s1kn6vrj5eo" path="res://assets/interact/coin.tscn" id="5_8s5ir"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkvgj"]
 radius = 600.04083
@@ -40,3 +41,6 @@ speed = -1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Saw2" unique_id=785296037]
 shape = SubResource("CircleShape2D_xkvgj")
+
+[node name="Coin" parent="." unique_id=1167496453 instance=ExtResource("5_8s5ir")]
+position = Vector2(5, -1441)

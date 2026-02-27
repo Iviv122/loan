@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cbif5tfw8bhmc"]
+
+[ext_resource type="Script" uid="uid://15482fmmi87q" path="res://objects/segments/segment.gd" id="1_hd4bi"]
+[ext_resource type="PackedScene" uid="uid://dx4lots0vurem" path="res://assets/interact/wire.tscn" id="2_gqdl6"]
+[ext_resource type="PackedScene" uid="uid://d0s1kn6vrj5eo" path="res://assets/interact/coin.tscn" id="3_maeyl"]
+
+[node name="Holes" type="Node2D" unique_id=63590874]
+script = ExtResource("1_hd4bi")
+metadata/_custom_type_script = "uid://15482fmmi87q"
+
+[node name="wire" parent="." unique_id=1853742232 instance=ExtResource("2_gqdl6")]
+position = Vector2(-600, -556)
+
+[node name="wire2" parent="." unique_id=432332235 instance=ExtResource("2_gqdl6")]
+position = Vector2(2, 425)
+
+[node name="wire3" parent="." unique_id=1663278258 instance=ExtResource("2_gqdl6")]
+position = Vector2(600, -587)
+
+[node name="wire4" parent="." unique_id=980258308 instance=ExtResource("2_gqdl6")]
+position = Vector2(0, 770)
+
+[node name="wire5" parent="." unique_id=1983025465 instance=ExtResource("2_gqdl6")]
+position = Vector2(11, 88)
+
+[node name="Coin" parent="." unique_id=1167496453 instance=ExtResource("3_maeyl")]
+position = Vector2(953, 217)

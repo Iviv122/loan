@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bweu5ic4e0kfn"]
+
+[ext_resource type="Script" uid="uid://xxio4ki1s6mu" path="res://objects/sound/sound_manager.gd" id="1_n8fe1"]
+[ext_resource type="AudioStream" uid="uid://bysabbypkdlus" path="res://raw_assets/sounds/pop2.ogg" id="2_7biak"]
+[ext_resource type="AudioStream" uid="uid://c2migbktl2h2n" path="res://raw_assets/sounds/sfx_throw.wav" id="3_vlgya"]
+[ext_resource type="AudioStream" uid="uid://c25t5v6n3441v" path="res://raw_assets/sounds/beltHandle1.ogg" id="4_vs211"]
+
+[node name="AudioManager" type="Node" unique_id=780423412 node_paths=PackedStringArray("pop_sound", "throw_sound", "coin_sound")]
+script = ExtResource("1_n8fe1")
+pop_sound = NodePath("pop")
+throw_sound = NodePath("throw")
+coin_sound = NodePath("coin")
+metadata/_custom_type_script = "uid://xxio4ki1s6mu"
+
+[node name="pop" type="AudioStreamPlayer" parent="." unique_id=777409089]
+stream = ExtResource("2_7biak")
+volume_db = 11.531
+
+[node name="throw" type="AudioStreamPlayer" parent="." unique_id=1242537700]
+stream = ExtResource("3_vlgya")
+volume_db = -8.0
+
+[node name="coin" type="AudioStreamPlayer" parent="." unique_id=30533231]
+stream = ExtResource("4_vs211")

@@ -19,16 +19,20 @@ func die() -> void:
 		ef.global_position = global_position
 		get_tree().current_scene.add_child(ef)
 
+	AudioManager.pop_sound.play()
+
 	queue_free()
 
 func push(m_pos : Vector2) -> void:
 
+	AudioManager.throw_sound.play()
 	var dir : Vector2 = (global_position-m_pos)
 
 	var power = min(dir.length(),max_power)
 	print(power)
 
-	apply_impulse(dir.normalized()*throw_power*power,m_pos)
+	apply_impulse(dir.normalized()*throw_power*power*0.6)
+	apply_impulse(dir.normalized()*throw_power*power*0.4,m_pos)
 
 	pushed.emit()
 

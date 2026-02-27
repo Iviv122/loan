@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 BackgroundMusic="*uid://c0fcx5y54ma62"
+AudioManager="*uid://bweu5ic4e0kfn"
 
 [display]
 
