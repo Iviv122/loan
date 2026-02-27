@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="loan"
-run/main_scene="uid://c261hhd0ee4a2"
+run/main_scene="uid://do4u05l8rc1om"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
