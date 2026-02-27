@@ -4,7 +4,7 @@ class_name Spawner
 
 @export var bread : Bread
 
-@export var dist_to_pass : float = 1000
+@export var dist_to_pass : float = 1250
 @export var add_dist : float = 3000 # max segment height to avoid overlap
 
 @export var segments : Array[PackedScene] # segments
@@ -28,9 +28,11 @@ func _ready():
 
 func spawn() -> void:
 	
-	if initialized.size() > 2:
-		initialized.front()
+	if initialized.size() > 3:
+		var t : Node2D = initialized.front()
 		initialized.pop_front()
+		t.queue_free()
+		print("despawned")
 
 	id+=1
 
@@ -50,3 +52,5 @@ func _process(delta: float) -> void:
 	if is_instance_valid(bread):
 		if bread.global_position.y > dist_to_pass_target:
 			spawn()
+			print("spawned")
+			dist_to_pass_target +=dist_to_pass/2 + add_dist
