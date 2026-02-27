@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d08kiakotmtuh" path="res://assets/visual/toast_explosion.tscn" id="9_101mb"]
 [ext_resource type="Script" uid="uid://cf4bipkuv6l11" path="res://objects/segments/spawner.gd" id="10_hbo4f"]
 [ext_resource type="PackedScene" uid="uid://b4klqenuv7e5q" path="res://assets/pit_segment/vertical_saws.tscn" id="11_ctvyo"]
-[ext_resource type="Script" uid="uid://dg6lkmygrh1wx" path="res://assets/debug/fps_meter.gd" id="12_qixtg"]
+[ext_resource type="Script" uid="uid://dg6lkmygrh1wx" path="res://objects/debug/fps_meter.gd" id="12_qixtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
 texture = ExtResource("5_din8e")
