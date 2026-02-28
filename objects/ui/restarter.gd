@@ -27,7 +27,7 @@ func start() -> void:
 
 
 func restart() -> void:
-	get_tree().change_scene_to_file(scene_to_load)
+	TransitionManager.load_scene(scene_to_load)
 
 func _process(delta):
 	global_position = global_position.lerp(camera.global_position,t)

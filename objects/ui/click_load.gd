@@ -4,10 +4,10 @@ extends Node2D
 @export var scene : String 
 
 func _input(event):
-    if event.is_action_pressed("m1"):
-        count -= 1
-        if count <= 0:
-            _update()
+	if event.is_action_pressed("m1"):
+		count -= 1
+		if count <= 0:
+			_update()
 
 func _update() -> void:
-    get_tree().change_scene_to_file(scene)
+	TransitionManager.load_scene(scene)

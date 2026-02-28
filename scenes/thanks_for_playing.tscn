@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1cql5ocgvre0" path="res://raw_assets/sprites/thanks.png" id="1_gplpo"]
 [ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="2_io7xl"]
+[ext_resource type="Texture2D" uid="uid://jyqqjmcdaikk" path="res://raw_assets/sprites/comic/sobaka.png" id="3_io7xl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lb54g"]
 atlas = ExtResource("1_gplpo")
@@ -35,7 +36,12 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1836224747]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=649890718]
-position = Vector2(559.00006, 343.00003)
-scale = Vector2(0.53518516, 0.53518516)
+position = Vector2(759.00006, 230.50003)
+scale = Vector2(0.32685181, 0.32685181)
 sprite_frames = SubResource("SpriteFrames_na8tq")
 script = ExtResource("2_io7xl")
+
+[node name="Sobaka" type="Sprite2D" parent="." unique_id=144910270]
+position = Vector2(319, 508)
+scale = Vector2(0.31574073, 0.31574073)
+texture = ExtResource("3_io7xl")

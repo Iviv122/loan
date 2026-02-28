@@ -18,4 +18,4 @@ func update() -> void:
     text = str(count)
 
 func win() -> void:
-    get_tree().change_scene_to_file(win_comic) 
+    TransitionManager.load_scene(win_comic) 

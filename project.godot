@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 
 BackgroundMusic="*uid://c0fcx5y54ma62"
 AudioManager="*uid://bweu5ic4e0kfn"
+TransitionManager="*uid://ciojogsxyo26y"
 
 [display]
 

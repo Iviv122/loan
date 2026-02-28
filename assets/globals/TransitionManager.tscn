@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ciojogsxyo26y"]
+
+[ext_resource type="Script" uid="uid://0qv4yywyxmwq" path="res://objects/ui/transition.gd" id="1_ij6im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij6im"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Trans" type="CanvasLayer" unique_id=1495953369 node_paths=PackedStringArray("panel")]
+script = ExtResource("1_ij6im")
+panel = NodePath("Transitor")
+metadata/_custom_type_script = "uid://0qv4yywyxmwq"
+
+[node name="Transitor" type="Panel" parent="." unique_id=588827606]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ij6im")
