@@ -205,7 +205,7 @@ offset_bottom = 105.0
 theme_override_font_sizes/font_size = 32
 script = ExtResource("21_525vb")
 bread = NodePath("../../bread")
-target = 9
+target = 8
 win_comic = "res://scenes/outro_comic.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1840342629]
