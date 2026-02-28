@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://btlgqip0fb4ot" path="res://assets/pit_segment/v_like.tscn" id="15_m6b5a"]
 [ext_resource type="Texture2D" uid="uid://roi22uqlamt7" path="res://raw_assets/sprites/click_to_restart.png" id="15_w3w6i"]
 [ext_resource type="PackedScene" uid="uid://mvj76012s8bn" path="res://assets/pit_segment/zig.tscn" id="16_mesn4"]
+[ext_resource type="Script" uid="uid://cf6yvsonut86e" path="res://objects/ui/coin_counter.gd" id="21_525vb"]
+[ext_resource type="Texture2D" uid="uid://tcb6gun6cib6" path="res://raw_assets/sprites/vcoin.png" id="22_25e7j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
 texture = ExtResource("5_din8e")
@@ -108,6 +110,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4x03"]
+atlas = ExtResource("22_25e7j")
+region = Rect2(591.68787, 5.5, 201.15808, 194.5)
+
 [node name="Node2D" type="Node2D" unique_id=1007655644]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=656913098 node_paths=PackedStringArray("target")]
@@ -188,3 +194,22 @@ metadata/_custom_type_script = "uid://pyibd5tw62iv"
 position = Vector2(131, 834)
 sprite_frames = SubResource("SpriteFrames_525vb")
 script = ExtResource("15_407ns")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106049759]
+
+[node name="CoinCounter" type="Label" parent="CanvasLayer" unique_id=1214272129 node_paths=PackedStringArray("bread")]
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 45.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 32
+script = ExtResource("21_525vb")
+bread = NodePath("../../bread")
+target = 2
+win_comic = "res://scenes/outro_comic.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1840342629]
+offset_right = 41.4433
+offset_bottom = 60.0
+texture = SubResource("AtlasTexture_t4x03")
+expand_mode = 3

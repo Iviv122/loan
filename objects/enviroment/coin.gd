@@ -6,5 +6,7 @@ func _ready() -> void:
 
 func pickup(_body : Node2D) -> void:
 	
+	if _body is Bread:
+		_body.coin()
 	AudioManager.coin_sound.play()
 	queue_free()

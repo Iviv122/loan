@@ -10,6 +10,10 @@ class_name Bread
 
 signal died()
 signal pushed()
+signal got_coin()
+
+func coin() -> void:
+	got_coin.emit()
 
 func die() -> void:
 	died.emit()

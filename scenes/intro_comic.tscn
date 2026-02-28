@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://ht1x0mynbke1"]
+
+[ext_resource type="Texture2D" uid="uid://b2e3i3eq3mbr4" path="res://raw_assets/sprites/comic/frame.png" id="1_a0oxq"]
+[ext_resource type="Texture2D" uid="uid://dj6hwyxbwq4yv" path="res://raw_assets/sprites/click.png" id="2_kmyuv"]
+[ext_resource type="Script" uid="uid://fu2sfqrbq8r4" path="res://objects/ui/click_load.gd" id="2_lobad"]
+[ext_resource type="Script" uid="uid://d378bbyam4vpq" path="res://objects/visual/start_animation.gd" id="3_fhu01"]
+[ext_resource type="Script" uid="uid://r3dq2atc26sx" path="res://objects/ui/cover.gd" id="4_fhu01"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lobad"]
+atlas = ExtResource("2_kmyuv")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yggoi"]
+atlas = ExtResource("2_kmyuv")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqulh"]
+atlas = ExtResource("2_kmyuv")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mwks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lobad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yggoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqulh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_kmyuv"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.36833754, 0.25108722, 0.4118105, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fhu01"]
+gradient = SubResource("Gradient_kmyuv")
+fill_from = Vector2(0, 1)
+
+[node name="IntroComic" type="Node2D" unique_id=935312610]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=684961982]
+position = Vector2(0, -2)
+scale = Vector2(0.60052085, 0.6425926)
+texture = ExtResource("1_a0oxq")
+centered = false
+script = ExtResource("2_lobad")
+count = 4
+scene = "res://scenes/gameplay.tscn"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1988609689]
+top_level = true
+position = Vector2(1059, 642)
+scale = Vector2(0.44000125, 0.44000125)
+sprite_frames = SubResource("SpriteFrames_2mwks")
+script = ExtResource("3_fhu01")
+
+[node name="frame1" type="Sprite2D" parent="." unique_id=1448118447]
+position = Vector2(550, 133)
+scale = Vector2(19.15874, -5.344516)
+texture = SubResource("GradientTexture2D_fhu01")
+script = ExtResource("4_fhu01")
+count = 1
+
+[node name="frame2" type="Sprite2D" parent="." unique_id=1028695077]
+position = Vector2(-90, 475)
+scale = Vector2(19.15874, -5.344516)
+texture = SubResource("GradientTexture2D_fhu01")
+script = ExtResource("4_fhu01")
+count = 2
+
+[node name="frame3" type="Sprite2D" parent="." unique_id=383289039]
+position = Vector2(1142, 468)
+scale = Vector2(19.15874, -5.344516)
+texture = SubResource("GradientTexture2D_fhu01")
+script = ExtResource("4_fhu01")
+count = 3
